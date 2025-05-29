@@ -1,0 +1,16 @@
+Dependencies:
+SQLAlchemy
+graphviz
+keeper-secrets-manager-core
+matplotlib
+numba
+numpy
+openpyxl
+pandas
+pantab
+shap
+
+Needs to have access to our SQL
+File to run: ./data_storage_manager/ongoing_predictors.py
+Output location: ./data_storage_manager/Current Week Predictions
+When to run: Once a week. For now, perform on Wednesday morning (after Payroll is complete on Monday / Tuesday and hours are in on Sunday evening)

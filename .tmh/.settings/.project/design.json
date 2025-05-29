@@ -1,0 +1,15 @@
+{
+  "Tags": [
+    {
+      "Key": "Safety"
+    },
+    {
+      "Key": "AI"
+    },
+    {
+      "Key": "IT"
+    }
+  ],
+  "SeparateRuntimeDependencies": true,
+  "IncludeSources": true
+}

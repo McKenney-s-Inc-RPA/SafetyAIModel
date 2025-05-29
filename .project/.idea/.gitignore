@@ -1,0 +1,7 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+/data_storage_manager/Visuals/
+/data_storage_manager/Output/
+/data_storage_manager/Data Sources/
+/data_storage_manager/__pycache__/
