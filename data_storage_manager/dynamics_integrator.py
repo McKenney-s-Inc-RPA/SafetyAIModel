@@ -51,7 +51,7 @@ def get_safety_data_results(first_week_start_date: date, last_week_end_date: dat
 
     # read the results into pandas dataframe
     sql_user, sql_pass = Keeper.get_credentials("VKP3GSaPfUrBPEMFb8fbeA")
-    connection_str = f'DRIVER={{{get_preferred_connector()}}};SERVER=MCKATLSQL;PORT=1433;DATABASE=MWA;UID={sql_user};PWD={sql_pass};'
+    connection_str = f'DRIVER={{{get_preferred_connector()}}};SERVER=MCKATLSQL;PORT=1433;DATABASE=MWA;UID={sql_user};PWD={sql_pass};TrustServerCertificate=yes;Encrypt=yes;'
     connection_url = sqlalchemy.engine.URL.create("mssql+pyodbc", query={"odbc_connect": connection_str})
     engine = sqlalchemy.create_engine(connection_url)
     df = pd.read_sql_query(stored_proc_call, engine)

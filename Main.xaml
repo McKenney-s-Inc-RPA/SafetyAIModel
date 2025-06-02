@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1680,1745.3333333333333" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:meaak="clr-namespace:McKenneys.Essentials.Activities.Activities.Keeper;assembly=McKenneys.Essentials.Activities" xmlns:mpa="clr-namespace:McKenneys.Powershell.Activities;assembly=McKenneys.Powershell.Activities" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1070,1767" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:meaak="clr-namespace:McKenneys.Essentials.Activities.Activities.Keeper;assembly=McKenneys.Essentials.Activities" xmlns:mpa="clr-namespace:McKenneys.Powershell.Activities;assembly=McKenneys.Powershell.Activities" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -99,16 +99,16 @@
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="654.6666666666666,1680.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="654,1702" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <mpa:RunPowershellScript Parameters="{x:Null}" Result="{x:Null}" ContinueOnError="False" DisplayName="Run Powershell Script" FilePath="runModel.ps1" sap:VirtualizedContainerService.HintSize="592.6666666666666,118.66666666666667" sap2010:WorkflowViewState.IdRef="RunPowershellScript_2" Is64Bit="True" PreferredVersion="PowerShell7_2" _continueOnError="False" />
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="592.6666666666666,1474" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+    <mpa:RunPowershellScript Parameters="{x:Null}" Result="{x:Null}" ContinueOnError="False" DisplayName="Run Powershell Script" FilePath="./runModel.ps1" sap:VirtualizedContainerService.HintSize="592,85" sap2010:WorkflowViewState.IdRef="RunPowershellScript_1" Is64Bit="True" PreferredVersion="PowerShell7_2" _continueOnError="False" />
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="592,1466" sap2010:WorkflowViewState.IdRef="TryCatch_2">
       <TryCatch.Try>
-        <Sequence sap:VirtualizedContainerService.HintSize="520,1213.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence sap:VirtualizedContainerService.HintSize="554,1238" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:String" Name="user" />
             <Variable x:TypeArguments="x:String" Name="pass" />
@@ -118,9 +118,9 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="S:\IT\BI\SSIS Integration Files\SafetyAiModel" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="458,196.66666666666666" sap2010:WorkflowViewState.IdRef="MoveFile_1" Overwrite="True" Path="./data_storage_manager/Current Week Predictions/current_injury_predictions.csv" />
-          <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="S:\IT\BI\SSIS Integration Files\SafetyAiModel" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="458,196.66666666666666" sap2010:WorkflowViewState.IdRef="MoveFile_2" Overwrite="True" Path="./data_storage_manager/Current Week Predictions/current_injury_predictions_breakdown.csv" />
-          <meaak:GetCredential MFACode="{x:Null}" Notes="{x:Null}" SecurePassword="{x:Null}" Title="{x:Null}" Website="{x:Null}" ContinueOnError="False" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="458,118.66666666666667" sap2010:WorkflowViewState.IdRef="GetCredential_1" UID="2nflCWA9ZP83YXcd4dopow" _continueOnError="False">
+          <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="S:\IT\BI\SSIS Integration Files\SafetyAiModel" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="492,159" sap2010:WorkflowViewState.IdRef="MoveFile_1" Overwrite="True" Path="./data_storage_manager/Current Week Predictions/current_injury_predictions.csv" />
+          <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="S:\IT\BI\SSIS Integration Files\SafetyAiModel" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="492,159" sap2010:WorkflowViewState.IdRef="MoveFile_2" Overwrite="True" Path="./data_storage_manager/Current Week Predictions/current_injury_predictions_breakdown.csv" />
+          <meaak:GetCredential MFACode="{x:Null}" Notes="{x:Null}" SecurePassword="{x:Null}" Title="{x:Null}" Website="{x:Null}" ContinueOnError="False" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="492,85" sap2010:WorkflowViewState.IdRef="GetCredential_1" UID="2nflCWA9ZP83YXcd4dopow" _continueOnError="False">
             <meaak:GetCredential.Login>
               <OutArgument x:TypeArguments="x:String">
                 <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">user</CSharpReference>
@@ -132,10 +132,10 @@
               </OutArgument>
             </meaak:GetCredential.Password>
           </meaak:GetCredential>
-          <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="458,613.3333333333334" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="2">
+          <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="492,604" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="2">
             <ui:RetryScope.ActivityBody>
               <ActivityAction>
-                <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="416,412" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="450,429" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="ui:DatabaseConnection" Name="dbConnection" />
                   </Sequence.Variables>
@@ -144,7 +144,7 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:DatabaseConnect DisplayName="Connect to database" sap:VirtualizedContainerService.HintSize="354,92" sap2010:WorkflowViewState.IdRef="DatabaseConnect_1" ProviderName="Microsoft.Data.SqlClient">
+                  <ui:DatabaseConnect DisplayName="Connect to database" sap:VirtualizedContainerService.HintSize="388,60" sap2010:WorkflowViewState.IdRef="DatabaseConnect_1" ProviderName="Microsoft.Data.SqlClient">
                     <ui:DatabaseConnect.ConnectionString>
                       <InArgument x:TypeArguments="x:String">
                         <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">"Data Source=MCKATLSQL;Initial Catalog=MWA;Persist Security Info=True;TrustServerCertificate=True;User ID=" + user + ";Password=" + pass</CSharpValue>
@@ -156,28 +156,24 @@
                       </OutArgument>
                     </ui:DatabaseConnect.DatabaseConnection>
                   </ui:DatabaseConnect>
-                  <ui:ExecuteQuery ContinueOnError="{x:Null}" DataTable="{x:Null}" TimeoutMS="{x:Null}" CommandType="StoredProcedure" DisplayName="Run query" sap:VirtualizedContainerService.HintSize="354,120.66666666666667" sap2010:WorkflowViewState.IdRef="ExecuteQuery_1" Sql="RobustReporting.InsETLMigrationCSV">
+                  <ui:ExecuteQuery ContinueOnError="{x:Null}" DataTable="{x:Null}" TimeoutMS="{x:Null}" CommandType="StoredProcedure" DisplayName="Run query" sap:VirtualizedContainerService.HintSize="388,89" sap2010:WorkflowViewState.IdRef="ExecuteQuery_1" Sql="RobustReporting.InsETLMigrationCSV">
                     <ui:ExecuteQuery.ExistingDbConnection>
                       <InArgument x:TypeArguments="ui:DatabaseConnection">
                         <CSharpValue x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">dbConnection</CSharpValue>
                       </InArgument>
                     </ui:ExecuteQuery.ExistingDbConnection>
                     <ui:ExecuteQuery.Parameters>
-                      <InArgument x:TypeArguments="x:String" x:Key="NameOfProcess">
-                        <Literal x:TypeArguments="x:String">SafetyAiModel</Literal>
-                      </InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="NameOfProcess">SafetyAiModel</InArgument>
                     </ui:ExecuteQuery.Parameters>
                   </ui:ExecuteQuery>
-                  <ui:ExecuteQuery ContinueOnError="{x:Null}" DataTable="{x:Null}" TimeoutMS="{x:Null}" CommandType="StoredProcedure" DisplayName="Run query" sap:VirtualizedContainerService.HintSize="354,111.33333333333333" sap2010:WorkflowViewState.IdRef="ExecuteQuery_2" Sql="RobustReporting.InsETLMigrationCSV">
+                  <ui:ExecuteQuery ContinueOnError="{x:Null}" DataTable="{x:Null}" TimeoutMS="{x:Null}" CommandType="StoredProcedure" DisplayName="Run query" sap:VirtualizedContainerService.HintSize="388,89" sap2010:WorkflowViewState.IdRef="ExecuteQuery_2" Sql="RobustReporting.InsETLMigrationCSV">
                     <ui:ExecuteQuery.ExistingDbConnection>
                       <InArgument x:TypeArguments="ui:DatabaseConnection">
                         <CSharpValue x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">dbConnection</CSharpValue>
                       </InArgument>
                     </ui:ExecuteQuery.ExistingDbConnection>
                     <ui:ExecuteQuery.Parameters>
-                      <InArgument x:TypeArguments="x:String" x:Key="NameOfProcess">
-                        <Literal x:TypeArguments="x:String">SafetyAiModelBreakdown</Literal>
-                      </InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="NameOfProcess">SafetyAiModelBreakdown</InArgument>
                     </ui:ExecuteQuery.Parameters>
                   </ui:ExecuteQuery>
                 </Sequence>
@@ -190,7 +186,7 @@
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="558.6666666666666,22" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="558,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -201,7 +197,7 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <Throw sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="Throw_2">
+            <Throw sap:VirtualizedContainerService.HintSize="334,90" sap2010:WorkflowViewState.IdRef="Throw_2">
               <InArgument x:TypeArguments="s:Exception">
                 <CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">new Exception("Current Week Predictions CSV(s) not generated")</CSharpValue>
               </InArgument>

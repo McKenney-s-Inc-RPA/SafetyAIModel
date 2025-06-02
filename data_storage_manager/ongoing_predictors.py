@@ -23,7 +23,7 @@ def calculate_current_predictions():
         mkdir(predictionsFolderPath)
 
     # get the current data
-    currData = createOngoingRollingWindowData(continue_with_sample=True)
+    currData = createOngoingRollingWindowData(continue_with_sample=False)
 
     # set up the model analyzer to know which columns to use
     modelAnalyzer = set_up_data_collection_as_model_source(currData)

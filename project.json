@@ -9,15 +9,15 @@
     "UiPath.Database.Activities": "[1.7.1]",
     "UiPath.Excel.Activities": "[2.24.2]",
     "UiPath.Mail.Activities": "[1.23.11]",
-    "UiPath.System.Activities": "[24.10.5]",
+    "UiPath.System.Activities.Runtime": "[24.10.5]",
     "UiPath.Testing.Activities": "[24.10.1]",
-    "UiPath.UIAutomation.Activities": "[24.10.3]"
+    "UiPath.UIAutomation.Activities.Runtime": "[24.10.3]"
   },
   "webServices": [],
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "22.10.14.0",
-  "projectVersion": "1.0.7",
+  "projectVersion": "1.0.9",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
@@ -49,6 +49,10 @@
     "fileInfoCollection": [],
     "modernBehavior": false,
     "saveToCloud": false
+  },
+  "arguments": {
+    "input": [],
+    "output": []
   },
   "expressionLanguage": "CSharp",
   "entryPoints": [
